@@ -120,8 +120,8 @@ async function uploadFile(req, res) {
       }
 
       const status = 'Success';
-      //res.header("Access-Control-Allow-Headers", "Content-Type");
-      //res.setHeader("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Headers", "Content-Type");
+      res.setHeader("Access-Control-Allow-Origin", "*");
       if (process.env.USE_LOCAL == "TRUE") {
         console.log(req.file);
         var fileUrl = `${parseBaseUrl}/files/${parseAppId}/${req.file.filename}`;
